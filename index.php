@@ -9,16 +9,7 @@
 </head>
 <body>
     <div id="message">
-
-    </div>
-
-    <form action="/todo/index.php" method="POST">
-        <input type="text" name="task" id="task" placeholder="Add a task...">
-        <input type="submit" name="submit" id="submit" value="submit">
-    </form>
-
-    <div id="tasks">
-        <?php
+    <?php
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -47,10 +38,31 @@
                     }
                 }
             } else {
-                echo 'There are no tasks yet.';
+                echo '';
             }
             
             // $conn->close();
+        ?>
+    </div>
+
+    <form action="/todo/index.php" method="POST">
+        <input type="text" name="task" id="task" placeholder="Add a task...">
+        <input type="submit" name="submit" id="submit" value="submit">
+    </form>
+
+    <div id="tasks">
+        <?php
+            $sql = "SELECT task FROM tasks";
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                  echo "<div class='task'>" . $row['task'] . "</div>";
+              }
+            } else {
+              echo "0 results";
+            }
         ?>
     </div>
 </body>
