@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #4169e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 72px;
+}
+
+form {
+  padding: 72px;
+}
+
+input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 16px;
+}
+
+input[type="text"] {
+  background: #9999f9;
+  color: #fff;
+}
+
+input[type="submit"] {
+  background: #fff;
+  color: #4169e1;
+}
+
+input[type="submit"]:hover {
+  background: #4169e1;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
