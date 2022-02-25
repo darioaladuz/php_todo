@@ -9,10 +9,7 @@
 </head>
 <body>
     <div id="message">
-        <?php 
-            $message = '';
-            echo $message;
-        ?>
+
     </div>
 
     <form action="/todo/index.php" method="POST">
@@ -36,7 +33,7 @@
             
             if(isset($_POST['submit'])){
                 if(empty($_POST['task'])){
-                    $message = 'what the hell bro? add something just fucking add soemthing';
+                    echo 'what the hell bro? add something just fucking add soemthing';
                 } else {
                     $task = $_POST['task'];
                     // echo $_POST['task'];
@@ -44,13 +41,13 @@
                     VALUES ('$task')";
                     
                     if ($conn->query($sql) === TRUE) {
-                      $message = "New record created successfully";
+                      echo "New record created successfully";
                     } else {
-                      $message = "Error: " . $sql . "<br>" . $conn->error;
+                      echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                 }
             } else {
-                $message = 'There was an error';
+                echo 'There are no tasks yet.';
             }
             
             // $conn->close();
