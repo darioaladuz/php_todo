@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
     background: #4169e1;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     gap: 72px;
 }
@@ -19,21 +19,4 @@ form {
 
 input {
     padding: 10px 15px;
-    border: none;
-    border-radius: 16px;
-}
-
-input[type="text"]{
-    background: #9999f9;
-    color: #fff;
-}
-
-input[type="submit"]{
-    background: #fff;
-    color: #4169e1;
-
-    &:hover {
-        background: #4169e1;
-        color: #fff;
-    }
 }
