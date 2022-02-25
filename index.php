@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <header id="ugly_header">
+        <nav>
+            <ul>
+                <li class="1"></li>
+                <li class="2"></li>
+                <li class="3"></li>
+                <li class="4"></li>
+                <li class="5"></li>
+                <li class="6"></li>
+                <li class="7"></li>
+                <li class="8"></li>
+            </ul>
+        </nav>
+    </header>
+
     <div id="message">
 
     </div>
